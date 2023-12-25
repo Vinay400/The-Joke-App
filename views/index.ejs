@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../style/style.css'>
+    <script src="../style/script.js"></script>
+</head>
+<body>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="center d-block mx-auto mb-4" src="../image/the-jokes-app-high-resolution-logo.png" alt="logo" width="72" height="40">
+        <h1 class="display-5 fw-bold text-body-emphasis"></h1>
+        <div class="container">
+            <div id="maincontent">
+                <h3>Select Category:</h3>
+                <form action="/submit" method="post" id="yourFormId" enctype="application/x-www-form-urlencoded">
+                  <input type="radio" name="choose" id="any" value="any" onclick="disableCustom()">Any<br>
+                  <input type="radio" name="choose" id="custom" value="custom" onclick="enable_text()">Custom:<br>
+                  <input type="checkbox" name="customCategory[]" id="programming" value="Programming" onclick="enable_text()">Programming
+                  <input type="checkbox" name="customCategory[]" id="misc" value="Misc" onclick="enable_text()">Misc
+                  <input type="checkbox" name="customCategory[]" id="dark" value="Dark" onclick="enable_text()">Dark
+                  <input type="checkbox" name="customCategory[]" id="pun" value="Pun" onclick="enable_text()">Pun
+                  <input type="checkbox" name="customCategory[]" id="spooky" value="Spooky" onclick="enable_text()">Spooky
+                  <input type="checkbox" name="customCategory[]" id="christmas" value="Christmas" onclick="enable_text()">Christmas
+                  
+                    <h3>Select language:</h3>
+                    <select name="language" id="select">
+                        <option value="en">en-English</option>
+                        <option value="es">es-Spanish</option>
+                        <option value="de">de-German</option>
+                    </select>
+                    <h3>Select Flags to blacklist (optional):</h3>
+                    <input type="checkbox" name="blacklist" value="religious">Religious
+                    <input type="checkbox" name="blacklist" value="nsfw">nsfw
+                    <input type="checkbox" name="blacklist" value="political">political
+                    <input type="checkbox" name="blacklist" value="racist">racist
+                    <input type="checkbox" name="blacklist" value="sexist">sexist
+                    <input type="checkbox" name="blacklist" value="explicit">explicit
+                    <h3>Select at least one joke type:</h3>
+                    <input type="checkbox" name="type" value="Single">Single
+                    <input type="checkbox" name="type" value="Twopart">Twopart<br>
+                    <br>
+                    <br>
+                    <div class="submit"><button type="submit" class="form-submit" onclick="submitForm()">Submit</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

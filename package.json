@@ -1,0 +1,21 @@
+{
+  "name": "capetown-project-2---the-joke-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinay",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "body": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2",
+    "Parser": "^0.0.1"
+  },
+  "description": ""
+}
