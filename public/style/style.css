@@ -118,13 +118,16 @@
       inherits: false;
     }
     body{
-      background-color: #FFECD6;
+      background-color: #FFF78A;
+      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Vina Sans', sans-serif;
     }
     .text{
       position: relative;
       width: 100%;
       text-align: center;
       padding-top: 50px;
-      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Vina Sans', sans-serif;
       color: #0F2167;
     }
