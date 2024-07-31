@@ -51,7 +51,7 @@ app.post('/submit', async (req, res) => {
   
   const blacklistFlags = blacklist.length > 0 ? `?blacklistFlags=${blacklist.join(',')}` : '';
 
-  const apiUrl = `https://v2.jokeapi.dev/joke/${categories.map(category => category.charAt(0).toUpperCase() + category.slice(1)).join(',')}${blacklistFlags}${language ? `&lang=${language}` : ''}&type=${type}`;
+  const apiUrl = `https://v2.jokeapi.dev/joke/${categories.map(category => category.charAt(0).toUpperCase() + category.slice(1)).join(',')}${blacklistFlags}${language ? `?lang=${language}` : ''}&type=${type}`;
   
   console.log('apiUrl:', apiUrl); 
   
