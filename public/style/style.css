@@ -1,133 +1,173 @@
 :root {
-   --card-height: 65vh;
-   --card-width: calc(var(--card-height) / 1.5);
- }
- 
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
 
+body {
+  background-color: #FFF78A; /* Fallback */
+  background-image: url('../image/DALL·E\ 2024-10-23\ 22.04.41\ -\ A\ light\,\ minimalist\ background\ wallpaper\ suitable\ for\ a\ joke\ app.\ The\ design\ should\ have\ soft\,\ playful\,\ and\ subtle\ patterns\ like\ clouds\,\ sun\,\ or\ light.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Vina Sans', sans-serif;
+}
 
-.submit{
-   position: relative;
-   right: 10px;
-   width: 100%;
-   height: 30px;
+#maincontent {
+  background: transparent; /* Slightly transparent white background */
+  padding: 30px;
+  border: 1px solid #0F2167;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Adjusted width for better layout */
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  left:10px;
 }
-#button{
-   position: absolute;
-   left: 45%;
-}
-.container{
-   position: relative;
-   width: 100%;
-   height: auto;
-}
-#maincontent{
-   position: absolute;
-   text-align: center;
-   border : 2px solid #0F2167;
-   border-radius: 15px;
-   left: 20%;
-   right: 20%;
-}
+
 .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      background-size: cover;
-      width: 100px;
-      background-color: #4CB9E7;
-    }
-    @keyframes spin {
-      0% {
-        --rotate: 0deg;
-      }
-      100% {
-        --rotate: 360deg;
-      }
-    }
-    .card {
-      background: url("../image/923.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: var(--card-width);
-      height: var(--card-height);
-      padding: 3px;
-      position: relative;
-      border-radius: 6px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      display: flex;
-      font-size: 1.5em;
-      color: rgb(88 199 250 / 0%);
-      font-family: "Gloria Hallelujah", cursive;
-      margin:auto;
-    } 
-    .card:hover {
-      color: #0F2167;
-      transition: color 1s;
-    }
-    .card:hover:before,
-    .card:hover:after {
-      animation: none;
-      opacity: 1;
-    }
-    .card::before {
-      content: "";
-      width: 104%;
-      height: 102%;
-      border-radius: 8px;
-      background-image: linear-gradient(
-        var(--rotate),
-        #5ddcff,
-        #3c67e3 43%,
-        #4e00c2,
-      );
-      position: absolute;
-      z-index: -1;
-      top: -1%;
-      left: -2%;
-      animation: spin 2.5s linear infinite;
-    }
-    
-    .card::after {
-      position: absolute;
-      content: "";
-      top: calc(var(--card-height) / 6);
-      left: 0;
-      right: 0;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      margin: 0 auto;
-      transform: scale(0.8);
-      filter: blur(calc(var(--card-height) / 6));
-      background-image: linear-gradient(
-        var(--rotate),
-        #5ddcff,
-        #3c67e3 43%,
-        #4e00c2
-      );
-      opacity: 1;
-      transition: opacity 0.5s;
-      animation: spin 2.5s linear infinite;
-    }
-    @property --rotate {
-      syntax: "<angle>";
-      initial-value: 132deg;
-      inherits: false;
-    }
-    body{
-      background-color: #FFF78A;
-      font-family: 'Josefin Sans', sans-serif;
-      font-family: 'Vina Sans', sans-serif;
-    }
-    .text{
-      position: relative;
-      width: 100%;
-      text-align: center;
-      padding-top: 50px;
-      font-family: 'Josefin Sans', sans-serif;
-      font-family: 'Vina Sans', sans-serif;
-      color: #0F2167;
-    }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  background-color: transparent; /* Removed background color from the logo */
+}
+
+.submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit button:hover {
+  background-color: #218838;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  0% {
+      --rotate: 0deg;
+  }
+  100% {
+      --rotate: 360deg;
+  }
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  font-family: "Gloria Hallelujah", cursive;
+  margin: auto;
+}
+
+.card:hover {
+  color: #0F2167;
+  transition: color 1s;
+}
+
+.card:hover:before,
+.card:hover:after {
+  animation: none;
+  opacity: 1;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.text {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Vina Sans', sans-serif;
+  color: #0F2167;
+}
+
+select, input[type="checkbox"], input[type="radio"] {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+select:focus, input[type="checkbox"]:focus, input[type="radio"]:focus {
+  outline: none;
+  border-color: #0F2167;
+  box-shadow: 0 0 5px rgba(15, 33, 103, 0.3);
+}
